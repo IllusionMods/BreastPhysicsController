@@ -1,18 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net35</TargetFramework>
-    <AssemblyName>BreastPhysicsController</AssemblyName>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DefineConstants>TRACE;DEBUG;KK</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DefineConstants>TRACE;KK</DefineConstants>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="IllusionModdingAPI.KKAPI" Version="1.28.2" />
-  </ItemGroup>
-  <PropertyGroup>
-    <PostBuildEvent>IF EXIST "$(SolutionDir)PostBuild.bat" CALL "$(SolutionDir)PostBuild.bat" "$(TargetPath)" KK</PostBuildEvent>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net35</TargetFramework>
+		<AssemblyName>BreastPhysicsController</AssemblyName>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DefineConstants>TRACE;DEBUG;KK</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DefineConstants>TRACE;KK</DefineConstants>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="IllusionModdingAPI.KKAPI" Version="1.38.0"/>
+	</ItemGroup>
+	<PropertyGroup>
+		<PostBuildEvent>IF EXIST "$(SolutionDir)PostBuild.bat" CALL "$(SolutionDir)PostBuild.bat" "$(TargetPath)" KK</PostBuildEvent>
+	</PropertyGroup>
+	<Import Project="..\Core_BreastPhysicsController\Core_BreastPhysicsController.projitems" Label="Shared" />
 </Project>

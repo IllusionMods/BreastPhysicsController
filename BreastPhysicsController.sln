@@ -1,14 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36301.6 d17.14
+VisualStudioVersion = 17.14.36301.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Core_BreastPhysicsController", "Core_BreastPhysicsController\Core_BreastPhysicsController.shproj", "{80FB3FE0-6444-41C9-85B8-7588EC87958C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKS_BreastPhysicsController", "KKS_BreastPhysicsController\KKS_BreastPhysicsController.csproj", "{200CC8BC-974F-4E7D-A477-4A9D79C2FC5F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KK_BreastPhysicsController", "KK_BreastPhysicsController\KK_BreastPhysicsController.csproj", "{21461B36-C004-4F5E-A7E7-A1621234B82D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution", "_Solution", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Build.props = Directory.Build.props
@@ -16,20 +10,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution", "_Solution", "{
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Core_BreastPhysicsController", "Core_BreastPhysicsController\Core_BreastPhysicsController.shproj", "{80FB3FE0-6444-41C9-85B8-7588EC87958C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KK_BreastPhysicsController", "KK_BreastPhysicsController\KK_BreastPhysicsController.csproj", "{11F771BB-A330-0C3D-BB3E-E544BB92FF9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKS_BreastPhysicsController", "KKS_BreastPhysicsController\KKS_BreastPhysicsController.csproj", "{408E69FC-CEE9-9CB1-2A05-B8016CD5BA34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{200CC8BC-974F-4E7D-A477-4A9D79C2FC5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{200CC8BC-974F-4E7D-A477-4A9D79C2FC5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{200CC8BC-974F-4E7D-A477-4A9D79C2FC5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{200CC8BC-974F-4E7D-A477-4A9D79C2FC5F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21461B36-C004-4F5E-A7E7-A1621234B82D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21461B36-C004-4F5E-A7E7-A1621234B82D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21461B36-C004-4F5E-A7E7-A1621234B82D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21461B36-C004-4F5E-A7E7-A1621234B82D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11F771BB-A330-0C3D-BB3E-E544BB92FF9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F771BB-A330-0C3D-BB3E-E544BB92FF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F771BB-A330-0C3D-BB3E-E544BB92FF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F771BB-A330-0C3D-BB3E-E544BB92FF9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{408E69FC-CEE9-9CB1-2A05-B8016CD5BA34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{408E69FC-CEE9-9CB1-2A05-B8016CD5BA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{408E69FC-CEE9-9CB1-2A05-B8016CD5BA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{408E69FC-CEE9-9CB1-2A05-B8016CD5BA34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,8 +38,8 @@ Global
 		SolutionGuid = {B6E84DC8-0BAB-4D23-9A32-9CFCC46BCD6C}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Core_BreastPhysicsController\Core_BreastPhysicsController.projitems*{200cc8bc-974f-4e7d-a477-4a9d79c2fc5f}*SharedItemsImports = 4
-		Core_BreastPhysicsController\Core_BreastPhysicsController.projitems*{21461b36-c004-4f5e-a7e7-a1621234b82d}*SharedItemsImports = 4
+		Core_BreastPhysicsController\Core_BreastPhysicsController.projitems*{11f771bb-a330-0c3d-bb3e-e544bb92ff9a}*SharedItemsImports = 5
+		Core_BreastPhysicsController\Core_BreastPhysicsController.projitems*{408e69fc-cee9-9cb1-2a05-b8016cd5ba34}*SharedItemsImports = 5
 		Core_BreastPhysicsController\Core_BreastPhysicsController.projitems*{80fb3fe0-6444-41c9-85b8-7588ec87958c}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

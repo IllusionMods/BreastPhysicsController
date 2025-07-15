@@ -6,7 +6,7 @@
     <SharedGUID>80fb3fe0-6444-41c9-85b8-7588ec87958c</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Core_BreastPhysicsController</Import_RootNamespace>
+    <Import_RootNamespace>BreastPhysicsController</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)BreastPhysicsController.cs" />
@@ -39,6 +39,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)UI\Parts\SelectableButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\Parts\SelectList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\Parts\SliderTextRef.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Parts\SliderTextSet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\Parts\Toggle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\Parts\ToggleRef.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\ToolsWindow.cs" />
@@ -50,9 +51,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)XMLParamHip.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XMLParamSet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)XMLPresetIO.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)UI\Parts\SliderTextSet.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resource\TexWindowBase.png" />

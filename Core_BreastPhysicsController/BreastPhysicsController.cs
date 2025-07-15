@@ -12,13 +12,12 @@ using UnityEngine;
 namespace BreastPhysicsController
 {
     [BepInPlugin(GUID: GUID, Name: Name, Version: Version)]
-    [BepInDependency("marco.kkapi", BepInDependency.DependencyFlags.HardDependency)]
-    [BepInDependency("com.bepis.bepinex.extendedsave", BepInDependency.DependencyFlags.HardDependency)]
+    [BepInDependency(KKAPI.KoikatuAPI.GUID, KKAPI.KoikatuAPI.VersionConst)]
     public class BreastPhysicsController : BaseUnityPlugin
     {
         public const string GUID = "com.snw.bepinex.breastphysicscontroller";
-        public const string Name = "BreastPhysicsController";
-        public const string Version = "2.1";
+        public const string Name = Constants.Name;
+        public const string Version = Constants.Version;
         public static string PresetDir;
 
         internal static new ManualLogSource Logger;
