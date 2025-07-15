@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30711.63
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Core_BreastPhysicsController", "Core_BreastPhysicsController\Core_BreastPhysicsController.shproj", "{80FB3FE0-6444-41C9-85B8-7588EC87958C}"
 EndProject
@@ -9,12 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKS_BreastPhysicsController
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KK_BreastPhysicsController", "KK_BreastPhysicsController\KK_BreastPhysicsController.csproj", "{21461B36-C004-4F5E-A7E7-A1621234B82D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution", "_Solution", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Core_BreastPhysicsController\Core_BreastPhysicsController.projitems*{200cc8bc-974f-4e7d-a477-4a9d79c2fc5f}*SharedItemsImports = 4
-		Core_BreastPhysicsController\Core_BreastPhysicsController.projitems*{21461b36-c004-4f5e-a7e7-a1621234b82d}*SharedItemsImports = 4
-		Core_BreastPhysicsController\Core_BreastPhysicsController.projitems*{80fb3fe0-6444-41c9-85b8-7588ec87958c}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -34,5 +36,10 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B6E84DC8-0BAB-4D23-9A32-9CFCC46BCD6C}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Core_BreastPhysicsController\Core_BreastPhysicsController.projitems*{200cc8bc-974f-4e7d-a477-4a9d79c2fc5f}*SharedItemsImports = 4
+		Core_BreastPhysicsController\Core_BreastPhysicsController.projitems*{21461b36-c004-4f5e-a7e7-a1621234b82d}*SharedItemsImports = 4
+		Core_BreastPhysicsController\Core_BreastPhysicsController.projitems*{80fb3fe0-6444-41c9-85b8-7588ec87958c}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

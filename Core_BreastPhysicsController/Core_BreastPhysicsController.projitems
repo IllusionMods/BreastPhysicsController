@@ -9,7 +9,6 @@
     <Import_RootNamespace>Core_BreastPhysicsController</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)AssemblyInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BreastPhysicsController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CharaParamControl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Compatibility\BreastDynamicBoneParameter.cs" />
