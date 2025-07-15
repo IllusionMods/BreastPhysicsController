@@ -2,13 +2,9 @@
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("BreastPhysicsController")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyDescription("Add more controls over parameters of DynamicBones")]
+[assembly: AssemblyCompany("https://github.com/IllusionMods/BreastPhysicsController")]
 [assembly: AssemblyProduct("BreastPhysicsController")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-[assembly: ComVisible(false)]
+[assembly: AssemblyCopyright("Copyright GPL-3.0 © 2019")]
 [assembly: AssemblyVersion(BreastPhysicsController.BreastPhysicsController.Version)]
 [assembly: AssemblyFileVersion(BreastPhysicsController.BreastPhysicsController.Version)]
