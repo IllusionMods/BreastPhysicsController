@@ -134,18 +134,23 @@ namespace BreastPhysicsController
 
         public static void SaveExtendedData(ParamCharaController controller)
         {
+            if (controller.paramCustom == null)
+            {
+                controller.SetExtendedData(null);
+                return;
+            }
+            
             var data = new PluginData();
             data.version = controller.ExtendedDataVersion;
             data.data.Add("ControllerEnabled", controller.Enabled);
             data.data.Add(ParamCharaController.ExtendedDataKey, controller.paramCustom.Serialize());
-            controller.SetExtendedData(data);
         }
 
         public static bool SaveParamChara(ParamCharaController controller, string path)
         {
             if (!Directory.Exists(Path.GetDirectoryName(path))) return false;
 
-            byte[] value = controller.paramCustom.Serialize();
+            byte[] value = controller.paramCustom?.Serialize();
             if (value == null) return false;
 
             using (FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write))
