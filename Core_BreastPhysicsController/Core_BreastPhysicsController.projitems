@@ -10,22 +10,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)BreastPhysicsController.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)CharaParamControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Params\CharaParamControl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Compatibility\BreastDynamicBoneParameter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Compatibility\XMLDynamicBoneParameter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ConfigGlobal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DBControllerManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ExtendedDataIO.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Hooks.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ParamBackup.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ParamBone.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ParamBustCustom.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ParamBustOrg.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ParamChangedInfo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ParamChara.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Params\ParamBackup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Params\ParamBone.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Params\ParamBustCustom.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Params\ParamBustOrg.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Params\ParamChangedInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Params\ParamChara.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ParamCharaController.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ParamHipCustom.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ParamHipOrg.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Params\ParamHipCustom.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Params\ParamHipOrg.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PluginPath.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\ControllerWindow.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\DialogSavePreset.cs" />
@@ -47,10 +47,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)UI\Util\Skin.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\Util\Style.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\Util\WindowID.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)XMLParamBust.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)XMLParamHip.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)XMLParamSet.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)XMLPresetIO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Params\XMLParamBust.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Params\XMLParamHip.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Params\XMLParamSet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Params\XMLPresetIO.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resource\TexWindowBase.png" />
@@ -58,6 +58,7 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resource\TexWindowInside.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Params\" />
     <Folder Include="$(MSBuildThisFileDirectory)Presets\Bust\" />
     <Folder Include="$(MSBuildThisFileDirectory)Presets\Hip\" />
   </ItemGroup>
