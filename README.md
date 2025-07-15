@@ -1,19 +1,15 @@
 # KK_BreastPhysicsController
-This plugin enable to control DynamicBone's some parameters of breast in Koikatsu!
+This plugin adds more controls over parameters of breast DynamicBones in some games by Illusiuon.
 
-## Install
-Put this plugin in KoikatsuGameRoot/BepinEx directory.  
-Requiere KKAPI ver1.2 and BepisPlugins r9(ExtensibleSaveFormat).
+## How to install
+1. Install the latest versions of BepinEx v5, BepisPlugins and ModdingAPI.
+2. Extract the release for your game into the game directory. The dll should end up inside the BepinEx\plugins directory.  
 
-## Description 
-### Control DynamicBone's parameters
-Press Key "P" at anytime, and ControlWindow appear.
-on the window, select character you want to control.  
-Check "enable" if you want to enable this plugin for the character, and edit slider or text_field some parameters. 
- 
-### Save and load parameters 
-DynamicBone's parameters controlled by this plugin is saved in character_card when you save the card if check "enable". 
-And when you load the card, this plugin load DynamicBone's parameters saved in the card by this plugin too.
+## How to use
+1. Press the "P" key at any time to open the Control Window.
+2. In the window, select the character you want to control.  
+3. Check "Enable" to activate this plugin for the selected character, then use the sliders or text fields to adjust various parameters.
 
-
-
+## Data Saving
+The DynamicBone parameters managed by this plugin are saved to the character card when you save the card, provided "Enable" is checked.  
+When you load the card, the plugin will also load the DynamicBone parameters previously saved to the card.
