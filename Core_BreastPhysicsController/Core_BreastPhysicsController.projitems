@@ -57,4 +57,13 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resource\TexWindowContents.png" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Resource\TexWindowInside.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Presets\Bust\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Presets\Hip\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)presets\Parameter presets are saved and loaded from GUI">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
