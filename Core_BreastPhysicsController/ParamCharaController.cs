@@ -308,7 +308,15 @@ namespace BreastPhysicsController
             }
             else if (state == ParamsKind.Bra || state == ParamsKind.Tops)
             {
-                return paramCustom.paramBust[coordinate][state].enabled;
+                
+                if (paramCustom.paramBust != null && 
+                    paramCustom.paramBust.TryGetValue(coordinate, out var coordinateDict) &&
+                    coordinateDict != null &&
+                    coordinateDict.TryGetValue(state, out var paramBustCustom))
+                {
+                    return paramBustCustom.enabled;
+                }
+                //return paramCustom.paramBust[coordinate][state].enabled;
             }
 
             return false;
