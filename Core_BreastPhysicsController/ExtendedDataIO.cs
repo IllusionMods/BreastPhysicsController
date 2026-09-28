@@ -36,10 +36,9 @@ namespace BreastPhysicsController
                 BreastPhysicsController.Logger.LogDebug("Found ver1 ExtendedData.");
 #endif
                 Compatibility.BreastDynamicBoneParameter paramVer1 = new Compatibility.BreastDynamicBoneParameter();
-                var byteDBParams = new object();
-                if (dataVer1.data.TryGetValue(ExtendedDataKey_ver1, out byteDBParams) && byteDBParams is byte[])
+                if (dataVer1.data.TryGetValue(ExtendedDataKey_ver1, out var byteDBParams) && byteDBParams is byte[] bytes)
                 {
-                    if (paramVer1.SetParamByte((byte[])byteDBParams))
+                    if (paramVer1.SetParamByte(bytes))
                     {
                         BreastPhysicsController.Logger.LogInfo("Loaded ver1 parameters from ExtendedData.");
                         if (paramVer1.CopyParamsTo(controller.paramCustom))
@@ -83,13 +82,12 @@ namespace BreastPhysicsController
 #if DEBUG
                 BreastPhysicsController.Logger.LogDebug("Found BodyPhysicsController plugin data");
 #endif
-                var byteCharaParam = new object();
-                if (data.data.TryGetValue(ParamCharaController.ExtendedDataKey, out byteCharaParam) && byteCharaParam is byte[])
+                if (data.data.TryGetValue(ParamCharaController.ExtendedDataKey, out var byteCharaParam) && byteCharaParam is byte[] bytes)
                 {
 #if DEBUG
                     BreastPhysicsController.Logger.LogDebug("Found ParamChara data");
 #endif
-                    controller.paramCustom = LZ4MessagePackSerializer.Deserialize<ParamChara>((byte[])byteCharaParam);
+                    controller.paramCustom = LZ4MessagePackSerializer.Deserialize<ParamChara>(bytes);
                     controller.Enabled = (bool)data.data["ControllerEnabled"];
                     return true;
                 }
@@ -118,13 +116,13 @@ namespace BreastPhysicsController
                     return true;
                 }
             }
-            catch (System.IO.IsolatedStorage.IsolatedStorageException e)
+            catch (System.IO.IsolatedStorage.IsolatedStorageException)
             {
                 BreastPhysicsController.Logger.LogWarning("Not found default parameter file.");
                 paramChara = null;
                 return false;
             }
-            catch (IOException e)
+            catch (IOException)
             {
                 BreastPhysicsController.Logger.LogWarning("Failed opening default parameter file.\r\n");
                 paramChara = null;

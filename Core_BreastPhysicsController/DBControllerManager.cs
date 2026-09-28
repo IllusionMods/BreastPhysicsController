@@ -46,8 +46,7 @@ namespace BreastPhysicsController
 
         public static ParamCharaController GetControllerByID(int id)
         {
-            ParamCharaController controller;
-            if (_controllers.TryGetValue(id, out controller)) return controller;
+            if (_controllers.TryGetValue(id, out var controller)) return controller;
             else return null;
         }
 

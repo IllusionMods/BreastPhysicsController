@@ -29,7 +29,7 @@ namespace BreastPhysicsController
                 Stiffness = paramBone.Stiffness;
                 Inert = paramBone.Inert;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 BreastPhysicsController.Logger.Log(BepInEx.Logging.LogLevel.Warning, "Failed copy DynamicBoneParam to XMLParamSet.");
                 return false;
@@ -47,7 +47,7 @@ namespace BreastPhysicsController
                 Stiffness = boneParameter.Stiffness;
                 Inert = boneParameter.Inert;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 BreastPhysicsController.Logger.Log(BepInEx.Logging.LogLevel.Warning, "Failed copy DynamicBoneParam.");
                 return false;

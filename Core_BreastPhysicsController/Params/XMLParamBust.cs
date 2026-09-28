@@ -88,7 +88,7 @@ namespace BreastPhysicsController
             {
                 xmlDynamicBoneParam = serializer.Deserialize(reader) as XMLParamBust;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }

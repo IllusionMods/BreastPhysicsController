@@ -9,7 +9,7 @@ namespace BreastPhysicsController
             Harmony.CreateAndPatchAll(typeof(Hooks));
         }
 
-        //for performance imporovement. but it makes them less compatible with other logic.
+        //for performance improvement. but it makes them less compatible with other logic.
         [HarmonyPrefix, HarmonyPatch(typeof(BustSoft), "ReCalc")]
         public static bool BustSoft_ReCalc_Pre(BustSoft __instance)
         {
@@ -20,7 +20,7 @@ namespace BreastPhysicsController
             }
             return true;
         }
-        //for performance imporovement. but it makes them less compatible with other logic.
+        //for performance improvement. but it makes them less compatible with other logic.
         [HarmonyPrefix, HarmonyPatch(typeof(BustGravity), "ReCalc")]
         public static bool BustGravity_ReCalc_Pre(BustGravity __instance)
         {
@@ -32,7 +32,7 @@ namespace BreastPhysicsController
             return true;
         }
 
-        //called clohes state changed.
+        //called clothes state changed.
         //clothesKind=0(tops),2(bra)
         //state=0(wearing),3(stripped)
         [HarmonyPostfix, HarmonyPatch(typeof(ChaControl), "SetClothesState")]

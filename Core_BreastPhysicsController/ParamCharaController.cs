@@ -12,7 +12,7 @@ namespace BreastPhysicsController
         public enum ParamsKind { Naked = 0, Bra = 1, Tops = 2, Hip = 3 }
 
         public int controllerID;
-        public static ParamChara defaultParam = null;
+        public static ParamChara defaultParam;
         public ParamChara paramCustom;
         private ParamBackup paramBackup;
         private bool _enabled;
@@ -57,13 +57,13 @@ namespace BreastPhysicsController
             }
 
             //Load init parameters from chara. 
-            //Dont load if parameters were loaded from extended data.(if endInitLoad=false)
+            //Don't load if parameters were loaded from extended data.(if endInitLoad=false)
             if (!endInitLoad)
             {
                 InitialLoadParams();
             }
 
-            //Controller enabled or diabled
+            //Controller enabled or disabled
             if (changedControllerEnabled)
             {
                 changedControllerEnabled = false;
@@ -84,7 +84,7 @@ namespace BreastPhysicsController
                         ApplyParamHip();
                     }
                 }
-                else //disbaled
+                else //disabled
                 {
 #if DEBUG
                     BreastPhysicsController.Logger.LogDebug("Controller is disabled.");
@@ -160,7 +160,7 @@ namespace BreastPhysicsController
                 }
                 changedInfo.Reset();
             }
-            else if (changedInfo.changedParam) //changed paramters per state
+            else if (changedInfo.changedParam) //changed parameters per state
             {
                 if (IsMatchState(changedInfo.kind, changedInfo.coordinate) && Enabled)
                 {
@@ -213,13 +213,13 @@ namespace BreastPhysicsController
 
         private bool HaveDynamicbone()
         {
-            //If not highPoly or dont have dynamicbone, ChaControl.getDynamicBoneBust() throw Null Reffrence Exception.
+            //If not highPoly or don't have dynamic bone, ChaControl.getDynamicBoneBust() throw Null Reference Exception.
             DynamicBone_Ver02 dynamicBone;
             try
             {
                 dynamicBone = ChaControl.getDynamicBoneBust(ChaInfo.DynamicBoneKind.BreastL);
             }
-            catch (NullReferenceException e)
+            catch (NullReferenceException)
             {
                 return false;
             }
@@ -268,8 +268,6 @@ namespace BreastPhysicsController
                         LoadParamFromCharaAll();
                         ChaControl.ReSetupDynamicBoneBust();
                     }
-                    break;
-                default:
                     break;
             }
             endInitLoad = true;
@@ -359,13 +357,13 @@ namespace BreastPhysicsController
 
         private ParamBustCustom GetParamBustCustomNow()
         {
-            ParamCharaController.ParamsKind state = GetNowBustWear();
-            if (state == ParamCharaController.ParamsKind.Naked)
+            var state = GetNowBustWear();
+            if (state == ParamsKind.Naked)
             {
                 return paramCustom.paramBustNaked;
             }
 
-            if (state == ParamCharaController.ParamsKind.Tops || state == ParamCharaController.ParamsKind.Bra)
+            if (state == ParamsKind.Tops || state == ParamsKind.Bra)
             {
                 return paramCustom.paramBust[GetNowCoordinate()][state];
             }
