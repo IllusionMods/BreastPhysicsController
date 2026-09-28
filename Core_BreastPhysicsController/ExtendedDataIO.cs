@@ -142,6 +142,7 @@ namespace BreastPhysicsController
             data.version = controller.ExtendedDataVersion;
             data.data.Add("ControllerEnabled", controller.Enabled);
             data.data.Add(ParamCharaController.ExtendedDataKey, controller.paramCustom.Serialize());
+            controller.SetExtendedData(data);
         }
 
         public static bool SaveParamChara(ParamCharaController controller, string path)
